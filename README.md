@@ -36,6 +36,7 @@ The project includes the following:
 ```bash
 git clone https://github.com/UwaisMansuri22/house-price-prediction-Rcode.git
 cd house-price-prediction-Rcode
+```
 
 2.	Install required libraries:
 	•	R
