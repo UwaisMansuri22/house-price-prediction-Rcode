@@ -33,7 +33,52 @@ The project includes the following:
 
 ## Setup and Usage
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/UwaisMansuri22/house-price-prediction-Rcode.git
-   cd house-price-prediction-Rcode
+```bash
+git clone https://github.com/UwaisMansuri22/house-price-prediction-Rcode.git
+cd house-price-prediction-Rcode
 
+2.	Install required libraries:
+	•	R
+	•	R packages: xgboost, dplyr, ggplot2, corrplot
+To install the packages, run the following command in your R console:
+
+install.packages(c("xgboost", "dplyr", "ggplot2", "corrplot"))
+
+3.	Run the notebook:
+Open the .ipynb file in Jupyter Notebook or RStudio and execute the cells sequentially to replicate the workflow.
+	4.	Generate predictions:
+	•	Ensure the test data file is correctly formatted and placed in the data/ directory.
+	•	Run the notebook to save predictions in a CSV file named house_regression_result.csv.
+
+Model Details
+	•	Algorithm: XGBoost (Extreme Gradient Boosting)
+	•	Parameters:
+	•	booster: gbtree
+	•	objective: reg:squarederror
+	•	max_depth: Tuned for optimal performance
+	•	eta: Learning rate tuned for better convergence
+	•	subsample and colsample_bytree: Regularization techniques to prevent overfitting
+	•	Early stopping based on validation performance
+
+Results
+	•	Validation Root Mean Squared Error (RMSE): ~28,649
+	•	The model predictions for the test dataset are saved in house_regression_result.csv.
+
+File Structure
+housing-price-prediction/
+│
+├── Final_Project_DS636.ipynb   # Main notebook
+├── data/                       # Dataset folder
+│   ├── train.csv               # Training data
+│   ├── test.csv                # Test data
+│
+├── house_regression_result.csv # Final predictions
+└── README.md                   # Project documentation
+
+Contributing
+
+Feel free to submit issues or pull requests. Contributions are welcome!
+
+License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
